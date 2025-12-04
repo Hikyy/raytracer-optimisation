@@ -22,29 +22,18 @@ int main(int argc, char *argv[])
   auto [scene, camera, image] = SceneLoader::Load(path);
 
   std::string outpath = "image.png";
-  bool useMultithreading = true; // Par défaut, multithreading activé
 
-  // Parser les arguments optionnels
-  for (int i = 2; i < argc; ++i)
+  // Parser les arguments optionnels pour le chemin de sortie
+  if (argc >= 3)
   {
-    std::string arg = argv[i];
-    if (arg == "--no-threading" || arg == "--single-thread")
-    {
-      useMultithreading = false;
-      std::cout << "Mode: Single-threaded" << std::endl;
-    }
-    else if (arg.find("--") != 0) // Si ce n'est pas un flag, c'est le chemin de sortie
-    {
-      outpath = arg;
-    }
+    outpath = argv[2];
   }
 
-  if (useMultithreading)
-  {
-    std::cout << "Mode: Multi-threaded" << std::endl;
-  }
-
-  camera->UseMultithreading = useMultithreading;
+#ifdef USE_MULTITHREADING
+  std::cout << "Mode: Multi-threaded" << std::endl;
+#else
+  std::cout << "Mode: Single-threaded" << std::endl;
+#endif
 
   std::cout << "Rendering " << image->width << "x" << image->height << " pixels..." << std::endl;
 
