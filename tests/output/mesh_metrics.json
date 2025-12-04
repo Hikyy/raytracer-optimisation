@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "avg_time_seconds": 20.335778546,
+    "max_time_seconds": 20.409210838,
+    "min_time_seconds": 20.262346254,
+    "samples_per_second": 101968.06556038506,
+    "samples_rendered": 2073600,
+    "std_deviation": 0.10384894326254086
+  },
+  "passed": true,
+  "test_name": "mesh"
+}

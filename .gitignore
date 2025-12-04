@@ -1,0 +1,64 @@
+# Build directories
+/build/
+/out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+CMakePresets.json
+CTestTestfile.cmake
+DartConfiguration.tcl
+Testing/
+install_manifest.txt
+
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+raytracer
+tests/test_vector3
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System
+.DS_Store
+.Thumbs.db
+
+# Profiling and Output
+callgrind.out.*
+image.png
+profiler.png
+profiler_output.png
+*.callgrind
+
+# Benchmark results
+benchmark_results.txt
+baseline_performance.txt
+benchmark_output.png
+test_output/
+
+# Test executables
+unit_tests
+benchmark_tests
+compare_benchmarks
+compare_images
+
+# Generated scene outputs
+output.png
+*.png
+!readme/*.png

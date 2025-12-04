@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "avg_time_seconds": 3.5030212670000007,
+    "max_time_seconds": 3.5453786590000003,
+    "min_time_seconds": 3.4588345300000003,
+    "samples_per_second": 591946.1635971848,
+    "samples_rendered": 2073600,
+    "std_deviation": 0.04330105591598117
+  },
+  "passed": true,
+  "test_name": "simple_scene"
+}

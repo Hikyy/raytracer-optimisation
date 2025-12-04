@@ -1,0 +1,15 @@
+add_library(rayscene 
+  ${CMAKE_CURRENT_SOURCE_DIR}/Camera.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Scene.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/SceneObject.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Intersection.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Sphere.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Triangle.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Plane.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Light.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Material.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/PhongMaterial.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/CheckerMaterial.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Mesh.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/SceneLoader.cpp
+)

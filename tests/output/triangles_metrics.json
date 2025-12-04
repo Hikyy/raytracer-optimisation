@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "avg_time_seconds": 1.1644077525,
+    "max_time_seconds": 1.166329916,
+    "min_time_seconds": 1.162485589,
+    "samples_per_second": 1780819.4728590145,
+    "samples_rendered": 2073600,
+    "std_deviation": 0.0027183496907984836
+  },
+  "passed": true,
+  "test_name": "triangles"
+}

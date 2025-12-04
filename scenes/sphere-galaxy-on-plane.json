@@ -1,0 +1,3513 @@
+{
+    "image": {
+        "width": 1920,
+        "height": 1080
+    },
+    "reflections": 2,
+    "ambient": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+    },
+    "lights": [
+        {
+            "type": "point",
+            "position": {
+                "x": -2,
+                "y": 1,
+                "z": 0
+            },
+            "diffuse": {
+                "r": 0.2,
+                "g": 0.2,
+                "b": 0.2
+            },
+            "specular": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5
+            }
+        }
+    ],
+    "objects": [
+        {
+            "type": "sphere",
+            "radius": 0.460047,
+            "position": {
+              "x": -4,
+              "y": 0.197191,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.783099,
+                "g": 0.79844,
+                "b": 0.911647
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.299388,
+            "position": {
+              "x": -3,
+              "y": 0.167611,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.76823,
+                "g": 0.277775,
+                "b": 0.55397
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.369349,
+            "position": {
+              "x": -2,
+              "y": 0.314435,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.364784,
+                "g": 0.513401,
+                "b": 0.95223
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.479049,
+            "position": {
+              "x": -1,
+              "y": 0.317856,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.717297,
+                "g": 0.141603,
+                "b": 0.606969
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.254075,
+            "position": {
+              "x": 0,
+              "y": 0.121443,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.137232,
+                "g": 0.804177,
+                "b": 0.156679
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.350236,
+            "position": {
+              "x": 1,
+              "y": 0.0648952,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.108809,
+                "g": 0.998924,
+                "b": 0.218257
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.378233,
+            "position": {
+              "x": 2,
+              "y": 0.419556,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.61264,
+                "g": 0.296032,
+                "b": 0.637552
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.381072,
+            "position": {
+              "x": 3,
+              "y": 0.246791,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.972775,
+                "g": 0.292517,
+                "b": 0.771358
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.381686,
+            "position": {
+              "x": 4,
+              "y": 0.384957,
+              "z": 4
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.400229,
+                "g": 0.891529,
+                "b": 0.283315
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.338115,
+            "position": {
+              "x": -4,
+              "y": 0.403862,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.919026,
+                "g": 0.0697553,
+                "b": 0.949327
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.381499,
+            "position": {
+              "x": -3,
+              "y": 0.0430279,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.192214,
+                "g": 0.663227,
+                "b": 0.890233
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.337223,
+            "position": {
+              "x": -2,
+              "y": 0.0320857,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.020023,
+                "g": 0.457702,
+                "b": 0.0630958
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.30957,
+            "position": {
+              "x": -1,
+              "y": 0.485317,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.902208,
+                "g": 0.85092,
+                "b": 0.266666
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.38494,
+            "position": {
+              "x": 0,
+              "y": 0.187603,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.760249,
+                "g": 0.512535,
+                "b": 0.667724
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.382902,
+            "position": {
+              "x": 1,
+              "y": 0.0196402,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.437638,
+                "g": 0.931835,
+                "b": 0.93081
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.430238,
+            "position": {
+              "x": 2,
+              "y": 0.142147,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.738534,
+                "g": 0.639979,
+                "b": 0.354049
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.421965,
+            "position": {
+              "x": 3,
+              "y": 0.0829871,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.440105,
+                "g": 0.880075,
+                "b": 0.829201
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.332584,
+            "position": {
+              "x": 4,
+              "y": 0.114484,
+              "z": 5
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.893372,
+                "g": 0.35036,
+                "b": 0.68667
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.489117,
+            "position": {
+              "x": -4,
+              "y": 0.29432,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.657304,
+                "g": 0.858676,
+                "b": 0.43956
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.480992,
+            "position": {
+              "x": -3,
+              "y": 0.199218,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.814767,
+                "g": 0.684219,
+                "b": 0.910972
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.370623,
+            "position": {
+              "x": -2,
+              "y": 0.107912,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.950252,
+                "g": 0.920128,
+                "b": 0.14766
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.470266,
+            "position": {
+              "x": -1,
+              "y": 0.32054,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.431953,
+                "g": 0.619596,
+                "b": 0.281059
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.446501,
+            "position": {
+              "x": 0,
+              "y": 0.153729,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.447034,
+                "g": 0.226107,
+                "b": 0.187533
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.319059,
+            "position": {
+              "x": 1,
+              "y": 0.278222,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.416501,
+                "g": 0.169607,
+                "b": 0.906804
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.275793,
+            "position": {
+              "x": 2,
+              "y": 0.0630377,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.495444,
+                "g": 0.760475,
+                "b": 0.984752
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.483751,
+            "position": {
+              "x": 3,
+              "y": 0.342223,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.383188,
+                "g": 0.749771,
+                "b": 0.368664
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.32354,
+            "position": {
+              "x": 4,
+              "y": 0.116131,
+              "z": 6
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.584489,
+                "g": 0.244413,
+                "b": 0.15239
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.433037,
+            "position": {
+              "x": -4,
+              "y": 0.0627375,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.79347,
+                "g": 0.164102,
+                "b": 0.745071
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.268632,
+            "position": {
+              "x": -3,
+              "y": 0.475052,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0525293,
+                "g": 0.521563,
+                "b": 0.176211
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.310016,
+            "position": {
+              "x": -2,
+              "y": 0.398899,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.732654,
+                "g": 0.656564,
+                "b": 0.967405
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.409865,
+            "position": {
+              "x": -1,
+              "y": 0.379867,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0934805,
+                "g": 0.134902,
+                "b": 0.52021
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.269558,
+            "position": {
+              "x": 0,
+              "y": 0.0349532,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.204655,
+                "g": 0.46142,
+                "b": 0.819677
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.39333,
+            "position": {
+              "x": 1,
+              "y": 0.37779,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0519388,
+                "g": 0.157807,
+                "b": 0.999994
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.301082,
+            "position": {
+              "x": 2,
+              "y": 0.444978,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.125468,
+                "g": 0.997799,
+                "b": 0.0540576
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.467635,
+            "position": {
+              "x": 3,
+              "y": 0.0361644,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.00416161,
+                "g": 0.923069,
+                "b": 0.593892
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.295093,
+            "position": {
+              "x": 4,
+              "y": 0.0815658,
+              "z": 7
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.39169,
+                "g": 0.913027,
+                "b": 0.819695
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.339774,
+            "position": {
+              "x": -4,
+              "y": 0.276243,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.57943,
+                "g": 0.452576,
+                "b": 0.687387
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.27491,
+            "position": {
+              "x": -3,
+              "y": 0.265404,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.757294,
+                "g": 0.304295,
+                "b": 0.992228
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.394243,
+            "position": {
+              "x": -2,
+              "y": 0.438807,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.747809,
+                "g": 0.62891,
+                "b": 0.0354209
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.436951,
+            "position": {
+              "x": -1,
+              "y": 0.416619,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.925377,
+                "g": 0.873271,
+                "b": 0.831038
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.494859,
+            "position": {
+              "x": 0,
+              "y": 0.371906,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.903366,
+                "g": 0.983596,
+                "b": 0.66688
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.374315,
+            "position": {
+              "x": 1,
+              "y": 0.081984,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.830012,
+                "g": 0.888949,
+                "b": 0.0769947
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.412427,
+            "position": {
+              "x": 2,
+              "y": 0.124022,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.62948,
+                "g": 0.229137,
+                "b": 0.70062
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.329217,
+            "position": {
+              "x": 3,
+              "y": 0.164389,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.231428,
+                "g": 0.074161,
+                "b": 0.633072
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.305914,
+            "position": {
+              "x": 4,
+              "y": 0.325566,
+              "z": 8
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.510686,
+                "g": 0.971466,
+                "b": 0.280042
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.386527,
+            "position": {
+              "x": -4,
+              "y": 0.359634,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.113281,
+                "g": 0.471483,
+                "b": 0.59254
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.48608,
+            "position": {
+              "x": -3,
+              "y": 0.225459,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.336351,
+                "g": 0.847684,
+                "b": 0.434513
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.250808,
+            "position": {
+              "x": -2,
+              "y": 0.172471,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.598481,
+                "g": 0.833243,
+                "b": 0.233892
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.418869,
+            "position": {
+              "x": -1,
+              "y": 0.241475,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.481936,
+                "g": 0.304956,
+                "b": 0.712087
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.295639,
+            "position": {
+              "x": 0,
+              "y": 0.310911,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0408643,
+                "g": 0.413984,
+                "b": 0.695984
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.418484,
+            "position": {
+              "x": 1,
+              "y": 0.31882,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.347116,
+                "g": 0.184622,
+                "b": 0.609106
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.406789,
+            "position": {
+              "x": 2,
+              "y": 0.365365,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.328374,
+                "g": 0.740438,
+                "b": 0.202213
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.480229,
+            "position": {
+              "x": 3,
+              "y": 0.342378,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.65313,
+                "g": 0.257265,
+                "b": 0.532441
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.271911,
+            "position": {
+              "x": 4,
+              "y": 0.130248,
+              "z": 9
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.877384,
+                "g": 0.686125,
+                "b": 0.0937402
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.277819,
+            "position": {
+              "x": -4,
+              "y": 0.1808,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.57669,
+                "g": 0.593211,
+                "b": 0.666557
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.322194,
+            "position": {
+              "x": -3,
+              "y": 0.387884,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.288379,
+                "g": 0.329642,
+                "b": 0.189751
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.496091,
+            "position": {
+              "x": -2,
+              "y": 0.00178929,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.827391,
+                "g": 0.331479,
+                "b": 0.188201
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.359124,
+            "position": {
+              "x": -1,
+              "y": 0.479318,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.91893,
+                "g": 0.764871,
+                "b": 0.699075
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.280286,
+            "position": {
+              "x": 0,
+              "y": 0.342893,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.383832,
+                "g": 0.774274,
+                "b": 0.943051
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.479068,
+            "position": {
+              "x": 1,
+              "y": 0.430959,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.203548,
+                "g": 0.793657,
+                "b": 0.548042
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.324322,
+            "position": {
+              "x": 2,
+              "y": 0.452466,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.909643,
+                "g": 0.873979,
+                "b": 0.498144
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.39405,
+            "position": {
+              "x": 3,
+              "y": 0.0813784,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.273911,
+                "g": 0.864579,
+                "b": 0.492399
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.365916,
+            "position": {
+              "x": 4,
+              "y": 0.424471,
+              "z": 10
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.495977,
+                "g": 0.291053,
+                "b": 0.180421
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.421045,
+            "position": {
+              "x": -4,
+              "y": 0.363775,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.139058,
+                "g": 0.603109,
+                "b": 0.492422
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.459533,
+            "position": {
+              "x": -3,
+              "y": 0.362126,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.178208,
+                "g": 0.221966,
+                "b": 0.498525
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.280315,
+            "position": {
+              "x": -2,
+              "y": 0.0691192,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.360443,
+                "g": 0.324807,
+                "b": 0.931895
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.477121,
+            "position": {
+              "x": -1,
+              "y": 0.311048,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.836828,
+                "g": 0.818128,
+                "b": 0.496074
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.333743,
+            "position": {
+              "x": 0,
+              "y": 0.197164,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.658831,
+                "g": 0.608883,
+                "b": 0.258906
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.287807,
+            "position": {
+              "x": 1,
+              "y": 0.0362725,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.107848,
+                "g": 0.647207,
+                "b": 0.363598
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.322067,
+            "position": {
+              "x": 2,
+              "y": 0.165693,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0911486,
+                "g": 0.427328,
+                "b": 0.934495
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.395893,
+            "position": {
+              "x": 3,
+              "y": 0.132731,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.658747,
+                "g": 0.761778,
+                "b": 0.487427
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.289318,
+            "position": {
+              "x": 4,
+              "y": 0.441518,
+              "z": 11
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.625665,
+                "g": 0.517715,
+                "b": 0.207844
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.38939,
+            "position": {
+              "x": -4,
+              "y": 0.2131,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.829939,
+                "g": 0.394388,
+                "b": 0.244327
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.331503,
+            "position": {
+              "x": -3,
+              "y": 0.36468,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.638654,
+                "g": 0.984845,
+                "b": 0.338243
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.47439,
+            "position": {
+              "x": -2,
+              "y": 0.0680373,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.410788,
+                "g": 0.00540855,
+                "b": 0.783282
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.443597,
+            "position": {
+              "x": -1,
+              "y": 0.146839,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.114668,
+                "g": 0.865535,
+                "b": 0.721006
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.262291,
+            "position": {
+              "x": 0,
+              "y": 0.224553,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.986467,
+                "g": 0.707909,
+                "b": 0.210883
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.368473,
+            "position": {
+              "x": 1,
+              "y": 0.432591,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0939195,
+                "g": 0.0995593,
+                "b": 0.382896
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.325441,
+            "position": {
+              "x": 2,
+              "y": 0.32856,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.809095,
+                "g": 0.131702,
+                "b": 0.0515083
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.263356,
+            "position": {
+              "x": 3,
+              "y": 0.228858,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.780868,
+                "g": 0.692076,
+                "b": 0.44256
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.279778,
+            "position": {
+              "x": 4,
+              "y": 0.294818,
+              "z": 12
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.578635,
+                "g": 0.529899,
+                "b": 0.595045
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.340479,
+            "position": {
+              "x": -4,
+              "y": 0.152143,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.888723,
+                "g": 0.476585,
+                "b": 0.16982
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.402432,
+            "position": {
+              "x": -3,
+              "y": 0.262874,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.618925,
+                "g": 0.596196,
+                "b": 0.233656
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.457452,
+            "position": {
+              "x": -2,
+              "y": 0.0350451,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0988374,
+                "g": 0.923728,
+                "b": 0.169649
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.370433,
+            "position": {
+              "x": -1,
+              "y": 0.112745,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.826769,
+                "g": 0.290829,
+                "b": 0.357193
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.469569,
+            "position": {
+              "x": 0,
+              "y": 0.172125,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.814909,
+                "g": 0.659146,
+                "b": 0.0363274
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.314367,
+            "position": {
+              "x": 1,
+              "y": 0.389129,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.625964,
+                "g": 0.836104,
+                "b": 0.308157
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.305252,
+            "position": {
+              "x": 2,
+              "y": 0.0990103,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.612442,
+                "g": 0.109733,
+                "b": 0.674605
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.445566,
+            "position": {
+              "x": 3,
+              "y": 0.359731,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.200352,
+                "g": 0.401188,
+                "b": 0.315658
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.358502,
+            "position": {
+              "x": 4,
+              "y": 0.115498,
+              "z": 13
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.385748,
+                "g": 0.532846,
+                "b": 0.154724
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.388849,
+            "position": {
+              "x": -4,
+              "y": 0.00728967,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.380215,
+                "g": 0.382167,
+                "b": 0.305408
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.434352,
+            "position": {
+              "x": -3,
+              "y": 0.130222,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.649659,
+                "g": 0.552316,
+                "b": 0.919591
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.421497,
+            "position": {
+              "x": -2,
+              "y": 0.404893,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.697848,
+                "g": 0.31195,
+                "b": 0.645889
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.251501,
+            "position": {
+              "x": -1,
+              "y": 0.26648,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.84391,
+                "g": 0.618447,
+                "b": 0.642693
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.379629,
+            "position": {
+              "x": 0,
+              "y": 0.200355,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.362154,
+                "g": 0.718867,
+                "b": 0.801897
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.419453,
+            "position": {
+              "x": 1,
+              "y": 0.0764379,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0328927,
+                "g": 0.0635606,
+                "b": 0.685722
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.296904,
+            "position": {
+              "x": 2,
+              "y": 0.309479,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.700301,
+                "g": 0.567831,
+                "b": 0.00112548
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.251427,
+            "position": {
+              "x": 3,
+              "y": 0.152619,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.26157,
+                "g": 0.655368,
+                "b": 0.857555
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.29529,
+            "position": {
+              "x": 4,
+              "y": 0.170677,
+              "z": 14
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.667341,
+                "g": 0.879009,
+                "b": 0.653305
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.328307,
+            "position": {
+              "x": -4,
+              "y": 0.442507,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.186265,
+                "g": 0.157139,
+                "b": 0.503461
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.457239,
+            "position": {
+              "x": -3,
+              "y": 0.337827,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.90417,
+                "g": 0.191112,
+                "b": 0.394521
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.426517,
+            "position": {
+              "x": -2,
+              "y": 0.434462,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.547397,
+                "g": 0.738959,
+                "b": 0.932485
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.30828,
+            "position": {
+              "x": -1,
+              "y": 0.463288,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.551443,
+                "g": 0.93342,
+                "b": 0.494407
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.388142,
+            "position": {
+              "x": 0,
+              "y": 0.469565,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.799646,
+                "g": 0.814139,
+                "b": 0.594497
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.4143,
+            "position": {
+              "x": 1,
+              "y": 0.49765,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.935852,
+                "g": 0.324541,
+                "b": 0.874309
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.397289,
+            "position": {
+              "x": 2,
+              "y": 0.318885,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.759324,
+                "g": 0.775421,
+                "b": 0.79491
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.315696,
+            "position": {
+              "x": 3,
+              "y": 0.302189,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.470564,
+                "g": 0.166955,
+                "b": 0.79549
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.466271,
+            "position": {
+              "x": 4,
+              "y": 0.436511,
+              "z": 15
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.664414,
+                "g": 0.412483,
+                "b": 0.611981
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.399225,
+            "position": {
+              "x": -4,
+              "y": 0.322801,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.538557,
+                "g": 0.148342,
+                "b": 0.579022
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.258241,
+            "position": {
+              "x": -3,
+              "y": 0.350455,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.518151,
+                "g": 0.832609,
+                "b": 0.515049
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.278162,
+            "position": {
+              "x": -2,
+              "y": 0.244905,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.510349,
+                "g": 0.0484997,
+                "b": 0.814351
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.346165,
+            "position": {
+              "x": -1,
+              "y": 0.318828,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.452122,
+                "g": 0.143982,
+                "b": 0.413078
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.311758,
+            "position": {
+              "x": 0,
+              "y": 0.203383,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0174566,
+                "g": 0.717597,
+                "b": 0.573721
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.453237,
+            "position": {
+              "x": 1,
+              "y": 0.291341,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.446743,
+                "g": 0.477361,
+                "b": 0.995165
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.264681,
+            "position": {
+              "x": 2,
+              "y": 0.0371302,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.640766,
+                "g": 0.59728,
+                "b": 0.222602
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.304947,
+            "position": {
+              "x": 3,
+              "y": 0.315122,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.923513,
+                "g": 0.737939,
+                "b": 0.462852
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.35964,
+            "position": {
+              "x": 4,
+              "y": 0.425293,
+              "z": 16
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.952662,
+                "g": 0.948911,
+                "b": 0.899086
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.441753,
+            "position": {
+              "x": -4,
+              "y": 0.166785,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.536743,
+                "g": 0.219136,
+                "b": 0.477551
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.487455,
+            "position": {
+              "x": -3,
+              "y": 0.233084,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.884318,
+                "g": 0.967277,
+                "b": 0.183765
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.36451,
+            "position": {
+              "x": -2,
+              "y": 0.390112,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.766448,
+                "g": 0.904782,
+                "b": 0.257585
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.440403,
+            "position": {
+              "x": -1,
+              "y": 0.481752,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.331846,
+                "g": 0.402379,
+                "b": 0.560785
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.388612,
+            "position": {
+              "x": 0,
+              "y": 0.311083,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.191028,
+                "g": 0.477961,
+                "b": 0.360105
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.41347,
+            "position": {
+              "x": 1,
+              "y": 0.458261,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.210692,
+                "g": 0.606542,
+                "b": 0.865434
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.277444,
+            "position": {
+              "x": 2,
+              "y": 0.186778,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.199003,
+                "g": 0.64652,
+                "b": 0.592692
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.419138,
+            "position": {
+              "x": 3,
+              "y": 0.29817,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0588605,
+                "g": 0.560872,
+                "b": 0.563617
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.310656,
+            "position": {
+              "x": 4,
+              "y": 0.00945538,
+              "z": 17
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.343841,
+                "g": 0.00907344,
+                "b": 0.923692
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.400357,
+            "position": {
+              "x": -4,
+              "y": 0.385343,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.887197,
+                "g": 0.933273,
+                "b": 0.173065
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.361995,
+            "position": {
+              "x": -3,
+              "y": 0.24386,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.795231,
+                "g": 0.639009,
+                "b": 0.965682
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.288834,
+            "position": {
+              "x": -2,
+              "y": 0.146445,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.882204,
+                "g": 0.366028,
+                "b": 0.899431
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.436909,
+            "position": {
+              "x": -1,
+              "y": 0.237903,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.272987,
+                "g": 0.94664,
+                "b": 0.122326
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.46642,
+            "position": {
+              "x": 0,
+              "y": 0.311597,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.718666,
+                "g": 0.92454,
+                "b": 0.184066
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.320571,
+            "position": {
+              "x": 1,
+              "y": 0.0835827,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.202977,
+                "g": 0.626125,
+                "b": 0.176239
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.281667,
+            "position": {
+              "x": 2,
+              "y": 0.113776,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.946925,
+                "g": 0.0138663,
+                "b": 0.160824
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.279997,
+            "position": {
+              "x": 3,
+              "y": 0.230924,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.648545,
+                "g": 0.915221,
+                "b": 0.100857
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.403557,
+            "position": {
+              "x": 4,
+              "y": 0.0352785,
+              "z": 18
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.393746,
+                "g": 0.496431,
+                "b": 0.436585
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.323294,
+            "position": {
+              "x": -4,
+              "y": 0.122034,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.912391,
+                "g": 0.566164,
+                "b": 0.190709
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.258679,
+            "position": {
+              "x": -3,
+              "y": 0.215922,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.813904,
+                "g": 0.753383,
+                "b": 0.356383
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.499492,
+            "position": {
+              "x": -2,
+              "y": 0.0178332,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.523548,
+                "g": 0.200947,
+                "b": 0.661792
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.424947,
+            "position": {
+              "x": -1,
+              "y": 0.163808,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.889343,
+                "g": 0.646712,
+                "b": 0.341482
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.262542,
+            "position": {
+              "x": 0,
+              "y": 0.383351,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.80333,
+                "g": 0.698713,
+                "b": 0.681922
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.476047,
+            "position": {
+              "x": 1,
+              "y": 0.15647,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.752479,
+                "g": 0.297933,
+                "b": 0.809371
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.297266,
+            "position": {
+              "x": 2,
+              "y": 0.295555,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.0534394,
+                "g": 0.101454,
+                "b": 0.157275
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.311037,
+            "position": {
+              "x": 3,
+              "y": 0.0680853,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.589119,
+                "g": 0.0580523,
+                "b": 0.889553
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          {
+            "type": "sphere",
+            "radius": 0.486375,
+            "position": {
+              "x": 4,
+              "y": 0.0280111,
+              "z": 19
+            },
+            "material": {
+              "type": "phong",
+              "ambient": {
+                "r": 0.92522,
+                "g": 0.46905,
+                "b": 0.256969
+              },
+              "diffuse": {
+                "r": 0.4,
+                "g": 0.4,
+                "b": 0.4
+              },
+              "shininess": 40,
+              "reflectivity": 0.6
+            }
+          },
+          
+        {
+            "type": "plane",
+            "position": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            },
+            "normal": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "material": {
+                "type": "checkerboard",
+                "ambient": {
+                    "r": 0.3,
+                    "g": 0.3,
+                    "b": 0.3
+                },
+                "reflectivity": 0.3
+            }
+        }
+    ]
+}
