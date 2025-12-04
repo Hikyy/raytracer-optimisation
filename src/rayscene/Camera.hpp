@@ -16,7 +16,6 @@ public:
   ~Camera();
 
   int Reflections = 0;
-  bool UseMultithreading = true; // Flag pour activer/désactiver le multithreading
 
   Vector3 getPosition();
   void setPosition(Vector3 &pos);
