@@ -98,6 +98,7 @@ void renderSegment(RenderSegment *segment)
  *    - Détecte automatiquement le nombre de cœurs disponibles
  *    - Crée un segment et un thread par cœur
  *    - Chaque thread rend sa portion de l'image en parallèle
+ *    - Flag UseMultithreading pour activer/désactiver le multithreading
  *
  * 2. Allocation sur la pile au lieu du tas (new/delete)
  *    Original : RenderSegment *seg = new RenderSegment();
@@ -119,7 +120,24 @@ void Camera::render(Image &image, Scene &scene)
 
   scene.prepare();
 
-  // OPTIMISATION MULTITHREADING : Obtenir le nombre de threads disponibles
+  // MODE SINGLE-THREAD : Rendu sans multithreading
+  if (!this->UseMultithreading)
+  {
+    RenderSegment seg;
+    seg.height = height;
+    seg.halfHeight = halfHeight;
+    seg.image = &image;
+    seg.scene = &scene;
+    seg.intervalX = intervalX;
+    seg.intervalY = intervalY;
+    seg.reflections = Reflections;
+    seg.rowMin = 0;
+    seg.rowMax = image.height;
+    renderSegment(&seg);
+    return;
+  }
+
+  // MODE MULTITHREADING : Obtenir le nombre de threads disponibles
   unsigned int nthreads = std::thread::hardware_concurrency();
   if (nthreads == 0) nthreads = 1; // Fallback si la détection échoue
 
