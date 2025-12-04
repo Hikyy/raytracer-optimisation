@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include <thread>
+#include <vector>
 #include "Camera.hpp"
 #include "../raymath/Ray.hpp"
 
@@ -90,20 +92,25 @@ void renderSegment(RenderSegment *segment)
 }
 
 /*
- * OPTIMISATION : Allocation sur la pile et pré-calculs
+ * OPTIMISATION : Multithreading et allocation sur la pile
  * Changements :
- * 1. Allocation sur la pile au lieu du tas (new/delete)
+ * 1. Utilisation du multithreading pour diviser l'image en segments
+ *    - Détecte automatiquement le nombre de cœurs disponibles
+ *    - Crée un segment et un thread par cœur
+ *    - Chaque thread rend sa portion de l'image en parallèle
+ *    - Flag UseMultithreading pour activer/désactiver le multithreading
+ *
+ * 2. Allocation sur la pile au lieu du tas (new/delete)
  *    Original : RenderSegment *seg = new RenderSegment();
  *    Optimisé : RenderSegment seg; (allocation pile - pas de surcharge tas)
- * 
- * 2. Pré-calculer halfHeight
+ *
+ * 3. Pré-calculer halfHeight
  *    Stocké dans segment->halfHeight pour éviter division dans boucle serrée
- * 
- * Amélioration combinée : Allocation plus rapide + moins de divisions
+ *
+ * Amélioration combinée : Allocation plus rapide + moins de divisions + parallélisation
  */
 void Camera::render(Image &image, Scene &scene)
 {
-
   double ratio = (double)image.width / (double)image.height;
   double height = 1.0 / ratio;
 
@@ -113,17 +120,61 @@ void Camera::render(Image &image, Scene &scene)
 
   scene.prepare();
 
-  RenderSegment seg; // OPTIMISÉ : Allocation pile au lieu de tas (était : new RenderSegment())
-  seg.height = height;
-  seg.halfHeight = halfHeight;  // OPTIMISÉ : Stocker valeur pré-calculée
-  seg.image = &image;
-  seg.scene = &scene;
-  seg.intervalX = intervalX;
-  seg.intervalY = intervalY;
-  seg.reflections = Reflections;
-  seg.rowMin = 0;
-  seg.rowMax = image.height;
-  renderSegment(&seg);  // OPTIMISÉ : Passer adresse variable pile (était : delete après)
+  // MODE SINGLE-THREAD : Rendu sans multithreading
+  if (!this->UseMultithreading)
+  {
+    RenderSegment seg;
+    seg.height = height;
+    seg.halfHeight = halfHeight;
+    seg.image = &image;
+    seg.scene = &scene;
+    seg.intervalX = intervalX;
+    seg.intervalY = intervalY;
+    seg.reflections = Reflections;
+    seg.rowMin = 0;
+    seg.rowMax = image.height;
+    renderSegment(&seg);
+    return;
+  }
+
+  // MODE MULTITHREADING : Obtenir le nombre de threads disponibles
+  unsigned int nthreads = std::thread::hardware_concurrency();
+  if (nthreads == 0) nthreads = 1; // Fallback si la détection échoue
+
+  std::vector<std::thread> threads;
+  std::vector<RenderSegment> segments(nthreads);
+
+  // OPTIMISATION MULTITHREADING : Diviser l'image en segments
+  int rowsPerThread = image.height / nthreads;
+  int remainingRows = image.height % nthreads;
+
+  int currentRow = 0;
+  for (unsigned int i = 0; i < nthreads; ++i)
+  {
+    // Créer un segment pour ce thread
+    segments[i].height = height;
+    segments[i].halfHeight = halfHeight;
+    segments[i].image = &image;
+    segments[i].scene = &scene;
+    segments[i].intervalX = intervalX;
+    segments[i].intervalY = intervalY;
+    segments[i].reflections = Reflections;
+    segments[i].rowMin = currentRow;
+
+    // Distribuer les lignes restantes aux premiers threads
+    int rowsForThisThread = rowsPerThread + (i < remainingRows ? 1 : 0);
+    segments[i].rowMax = currentRow + rowsForThisThread;
+    currentRow += rowsForThisThread;
+
+    // OPTIMISATION MULTITHREADING : Créer un thread pour ce segment
+    threads.push_back(std::thread(renderSegment, &segments[i]));
+  }
+
+  // OPTIMISATION MULTITHREADING : Attendre que tous les threads se terminent
+  for (auto& thread : threads)
+  {
+    thread.join();
+  }
 }
 
 std::ostream &operator<<(std::ostream &_stream, Camera &cam)

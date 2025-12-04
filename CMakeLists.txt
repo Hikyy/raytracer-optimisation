@@ -4,8 +4,8 @@ project(raytracer VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -ffast-math")
-set(CMAKE_BUILD_TYPE Release)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
 
 add_executable(raytracer main.cpp)
 
@@ -30,5 +30,6 @@ target_link_libraries(raytracer
                       raymath
                       rayimage
                       lodepng
+                      Threads::Threads
                       )
 
