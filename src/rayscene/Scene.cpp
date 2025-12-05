@@ -8,12 +8,15 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-  for (int i = 0; i < objects.size(); ++i)
+  // OPTIMISÉ : Stocker la taille pour éviter appels répétés à size()
+  const int objectCount = objects.size();
+  for (int i = 0; i < objectCount; ++i)
   {
     delete objects[i];
   }
 
-  for (int i = 0; i < lights.size(); ++i)
+  const int lightCount = lights.size();
+  for (int i = 0; i < lightCount; ++i)
   {
     delete lights[i];
   }
@@ -31,13 +34,21 @@ void Scene::addLight(Light *light)
 
 void Scene::prepare()
 {
-  for (int i = 0; i < objects.size(); ++i)
+  // OPTIMISÉ : Éviter appel répété à size() dans la condition de boucle
+  const int objectCount = objects.size();
+  for (int i = 0; i < objectCount; ++i)
   {
     objects[i]->applyTransform();
 #ifdef USE_AABB
     objects[i]->calculateBoundingBox();
 #endif
   }
+  
+#ifdef USE_BSPTREE
+  // Construction de l'arbre BSP pour optimiser les recherches d'intersection
+  // Complexité réduite de O(n) à O(log n) pour chaque rayon
+  bspTree.build(objects);
+#endif
 }
 
 std::vector<Light *> Scene::getLights()
@@ -76,23 +87,28 @@ bool Scene::closestIntersection(Ray &r, Intersection &closest, CullingType culli
 
   double closestDistanceSquared = -1;  // OPTIMISÉ : Stocker distance au carré
   Intersection closestInter;
-  for (int i = 0; i < objects.size(); ++i)
+
+#ifdef USE_BSPTREE
+  // OPTIMISATION BSP TREE : Utiliser l'arbre pour réduire le nombre d'objets à tester
+  // Au lieu de tester tous les objets O(n), on ne teste que ceux dans les AABB intersectés O(log n)
+  std::vector<SceneObject*> candidates;
+  if (!bspTree.intersects(r, candidates)) {
+    closest = closestInter;
+    return false;
+  }
+  
+  const int candidateCount = candidates.size();
+  for (int i = 0; i < candidateCount; ++i)
   {
 #ifdef USE_AABB
-    // OPTIMISATION AABB : Vérifier d'abord si le rayon intersecte la bounding box
-    // Si le rayon ne touche pas la bounding box, ignorer compl\u00e8tement l'objet
-    if (!objects[i]->boundingBox.intersects(r))
+    // Double vérification avec AABB individuel (optionnel mais peut aider)
+    if (!candidates[i]->boundingBox.intersects(r))
     {
       continue;
     }
-
-    // Si on arrive ici, la bounding box a \u00e9t\u00e9 touch\u00e9e
-    // On doit faire un calcul d'intersection pr\u00e9cis
 #endif
-    if (objects[i]->intersects(r, intersection, culling))
+    if (candidates[i]->intersects(r, intersection, culling))
     {
-      // OPTIMISÉ : Utiliser lengthSquared() au lieu de length() - pas besoin de sqrt !
-      // CODE AVANT : intersection.Distance = (intersection.Position - r.GetPosition()).length();
       intersection.Distance = (intersection.Position - r.GetPosition()).lengthSquared();
       if (closestDistanceSquared < 0 || intersection.Distance < closestDistanceSquared)
       {
@@ -101,6 +117,31 @@ bool Scene::closestIntersection(Ray &r, Intersection &closest, CullingType culli
       }
     }
   }
+#else
+  // Version sans BSP Tree : tester tous les objets
+  const int objectCount = objects.size();
+  for (int i = 0; i < objectCount; ++i)
+  {
+#ifdef USE_AABB
+    // OPTIMISATION AABB : Vérifier d'abord si le rayon intersecte la bounding box
+    if (!objects[i]->boundingBox.intersects(r))
+    {
+      continue;
+    }
+#endif
+    if (objects[i]->intersects(r, intersection, culling))
+    {
+      // OPTIMISÉ : Utiliser lengthSquared() au lieu de length()
+      intersection.Distance = (intersection.Position - r.GetPosition()).lengthSquared();
+      if (closestDistanceSquared < 0 || intersection.Distance < closestDistanceSquared)
+      {
+        closestDistanceSquared = intersection.Distance;
+        closestInter = intersection;
+      }
+    }
+  }
+#endif
+
   closest = closestInter;
   return (closestDistanceSquared > -1);
 }
