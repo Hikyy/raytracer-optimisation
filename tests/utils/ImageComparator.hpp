@@ -10,10 +10,15 @@ public:
                        const std::string& image2_path,
                        int tolerance = 2);
     
-    // Compare a generated image with the reference image
+    // Compare a generated image with the reference image for current configuration
+    // Utilise TestConfig pour déterminer la référence appropriée
     static bool compareWithReference(const std::string& test_name,
                                     const std::string& generated_path,
                                     int tolerance = 2);
+    
+    // Compare using hash (faster, exact match only)
+    static bool compareWithReferenceByHash(const std::string& test_name,
+                                          const std::string& generated_path);
     
 private:
     static std::string getReferenceImagePath(const std::string& test_name);
