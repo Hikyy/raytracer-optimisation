@@ -91,25 +91,42 @@ void Mesh::calculateBoundingBox()
 
 bool Mesh::intersects(Ray &r, Intersection &intersection, CullingType culling)
 {
+#ifdef USE_AABB
+    // OPTIMISATION CRITIQUE : Vérifier d'abord la bounding box du mesh ENTIER
+    // Si le rayon ne touche pas le mesh, on évite de tester les 967 triangles !
+    if (!boundingBox.intersects(r))
+    {
+        return false;
+    }
+#endif
+
     Intersection tInter;
 
-    double closestDistance = -1;
+    // OPTIMISÉ : Utiliser lengthSquared() pour éviter sqrt() à chaque triangle
+    double closestDistanceSquared = -1;
     Intersection closestInter;
     for (int i = 0; i < triangles.size(); ++i)
     {
+#ifdef USE_AABB
+        // OPTIMISATION : Vérifier la bounding box de chaque triangle avant le calcul précis
+        if (!triangles[i]->boundingBox.intersects(r))
+        {
+            continue;
+        }
+#endif
         if (triangles[i]->intersects(r, tInter, culling))
         {
-
-            tInter.Distance = (tInter.Position - r.GetPosition()).length();
-            if (closestDistance < 0 || tInter.Distance < closestDistance)
+            // OPTIMISÉ : lengthSquared() au lieu de length() - pas de sqrt !
+            tInter.Distance = (tInter.Position - r.GetPosition()).lengthSquared();
+            if (closestDistanceSquared < 0 || tInter.Distance < closestDistanceSquared)
             {
-                closestDistance = tInter.Distance;
+                closestDistanceSquared = tInter.Distance;
                 closestInter = tInter;
             }
         }
     }
 
-    if (closestDistance < 0)
+    if (closestDistanceSquared < 0)
     {
         return false;
     }
