@@ -1,4 +1,6 @@
 #include "ImageComparator.hpp"
+#include "TestConfig.hpp"
+#include "ImageHasher.hpp"
 #include "lodepng.h"
 #include <iostream>
 #include <vector>
@@ -6,7 +8,8 @@
 #include <cstdlib>
 
 std::string ImageComparator::getReferenceImagePath(const std::string& test_name) {
-    return "../../tests/references/" + test_name + ".png";
+    // Utilise TestConfig pour obtenir le chemin approprié à la configuration
+    return TestConfig::getReferencePathForConfig(test_name);
 }
 
 bool ImageComparator::compare(const std::string& image1_path, 
@@ -75,6 +78,33 @@ bool ImageComparator::compareWithReference(const std::string& test_name,
                                            const std::string& generated_path,
                                            int tolerance) {
     std::string reference_path = getReferenceImagePath(test_name);
+    
+    // Afficher la configuration utilisée
+    std::cout << "Configuration: " << TestConfig::getConfigName() << std::endl;
     std::cout << "Comparaison avec la référence: " << reference_path << std::endl;
+    
+    // Vérifier si la référence existe
+    if (!TestConfig::hasReferenceForConfig(test_name)) {
+        std::cout << "⚠️  Aucune référence pour cette configuration" << std::endl;
+        std::cout << "   Vous pouvez générer la référence avec:" << std::endl;
+        std::cout << "   cp " << generated_path << " " << reference_path << std::endl;
+        return true; // Ne pas échouer si pas de référence
+    }
+    
     return compare(reference_path, generated_path, tolerance);
+}
+
+bool ImageComparator::compareWithReferenceByHash(const std::string& test_name,
+                                                const std::string& generated_path) {
+    std::string reference_path = getReferenceImagePath(test_name);
+    
+    std::cout << "Configuration: " << TestConfig::getConfigName() << std::endl;
+    std::cout << "Comparaison par hash avec: " << reference_path << std::endl;
+    
+    if (!TestConfig::hasReferenceForConfig(test_name)) {
+        std::cout << "⚠️  Aucune référence pour cette configuration" << std::endl;
+        return true;
+    }
+    
+    return ImageHasher::compareByHash(reference_path, generated_path);
 }

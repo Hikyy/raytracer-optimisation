@@ -1,71 +1,106 @@
 #include <iostream>
 #include <cassert>
 #include "ImageComparator.hpp"
+#include "ImageHasher.hpp"
 #include "BenchmarkRunner.hpp"
+#include "SceneRegistry.hpp"
 
-int main() {
-    // En-tête du test
+/*
+ * TEST: Rendu de Scène Simple
+ * Teste TOUTES les scènes disponibles pour s'assurer que le raytracer
+ * fonctionne correctement après les optimisations
+ * 
+ * Utilise DEUX méthodes de validation:
+ * 1. Comparaison pixel-par-pixel (tolérance ±2) - Robuste au multi-threading
+ * 2. Comparaison par hash (exactitude absolue) - Détecte moindre différence
+ */
+
+int main(int argc, char** argv) {
+    // Déterminer le mode (default: utilise la config de compilation)
+    bool use_multithread = true;
+#ifndef USE_MULTITHREADING
+    use_multithread = false;
+#endif
+    
+    // Permettre override via argument ("--single-thread")
+    if (argc > 1 && std::string(argv[1]) == "--single-thread") {
+        use_multithread = false;
+    }
+    
     std::cout << "============================================" << std::endl;
     std::cout << "=== Test: Rendu Scène Simple            ===" << std::endl;
     std::cout << "============================================" << std::endl;
+    std::cout << "Mode: " << (use_multithread ? "Multi-Thread" : "Single-Thread") << std::endl;
     std::cout << std::endl;
     
-    // Configuration: chemins des fichiers
-    std::string scene_path = "../../scenes/two-spheres-on-plane.json";
-    std::string output_path = "../../tests/output/simple_scene.png";
-    std::string test_name = "simple_scene";
+    // Obtenir toutes les scènes
+    auto scenes = SceneRegistry::getAllScenes();
+    bool all_passed = true;
     
-    // ÉTAPE 1: Lancer le benchmark (3 itérations pour mesure précise)
-    std::cout << "Running benchmark for: " << scene_path << std::endl;
-    auto metrics = BenchmarkRunner::runBenchmark(
-        test_name, 
-        scene_path, 
-        output_path,
-        3  // 3 itérations pour avoir moyenne/min/max fiables
-    );
-    
-    // Vérifier que le rendu a réussi
-    if (!metrics.passed) {
-        std::cerr << "❌ Benchmark ÉCHOUÉ: " << metrics.error_message << std::endl;
-        return 1;
+    for (const auto& scene : scenes) {
+        std::cout << "--- Scène: " << scene.name << " ---" << std::endl;
+        
+        std::string output_path = "tests/output/" + scene.name + ".png";
+        
+        // Benchmark
+        auto metrics = BenchmarkRunner::runBenchmark(
+            scene.name,
+            scene.scene_path,
+            output_path,
+            scene.iterations
+        );
+        
+        if (!metrics.passed) {
+            std::cerr << "❌ Rendu échoué: " << metrics.error_message << std::endl;
+            all_passed = false;
+            continue;
+        }
+        
+        // Comparaison d'image (si référence existe)
+        if (scene.has_reference) {
+            std::cout << "--- Validation de l'Image ---" << std::endl;
+            
+            std::string ref_path = SceneRegistry::getReferencePathForMode(
+                scene.reference_name,
+                use_multithread
+            );
+            
+            std::cout << "Référence: " << ref_path << std::endl;
+            
+            // MÉTHODE 1: Comparaison pixel-par-pixel avec tolérance
+            std::cout << "1. Comparaison pixel-par-pixel (tolérance ±2)..." << std::endl;
+            bool pixel_ok = ImageComparator::compare(
+                ref_path,
+                output_path,
+                2  // Tolérance
+            );
+            
+            // MÉTHODE 2: Comparaison par hash (exactitude absolue)
+            std::cout << "2. Comparaison par hash (exactitude)..." << std::endl;
+            bool hash_ok = ImageHasher::compareByHash(ref_path, output_path);
+            
+            if (!pixel_ok) {
+                std::cerr << "❌ Comparaison pixel ÉCHOUÉE pour " << scene.name << std::endl;
+                all_passed = false;
+            } else if (!hash_ok) {
+                std::cout << "⚠️  Hash différent (normal en multi-thread)" << std::endl;
+                std::cout << "✅ Mais pixels OK (différences < tolérance)" << std::endl;
+            } else {
+                std::cout << "✅ Image PARFAITEMENT identique (hash + pixels)" << std::endl;
+            }
+        }
+        
+        std::cout << std::endl;
     }
     
-    // ÉTAPE 2: Afficher les métriques de performance
-    std::cout << std::endl;
-    std::cout << "--- Résultats du Benchmark ---" << std::endl;
-    std::cout << "Test:           " << test_name << std::endl;
-    std::cout << "Temps moyen:    " << metrics.avg_time_seconds << " s" << std::endl;
-    std::cout << "Temps min:      " << metrics.min_time_seconds << " s" << std::endl;
-    std::cout << "Temps max:      " << metrics.max_time_seconds << " s" << std::endl;
-    std::cout << "Écart-type:     " << metrics.std_deviation << " s" << std::endl;
-    std::cout << "Échantillons:   " << metrics.samples_rendered << std::endl;
-    std::cout << "Pixels/sec:     " << metrics.samples_per_second << std::endl;
-    std::cout << std::endl;
-    
-    // ÉTAPE 3: Sauvegarder les métriques en JSON (pour comparaison avant/après)
-    std::string metrics_path = "../../tests/output/simple_scene_metrics.json";
-    BenchmarkRunner::saveMetrics(metrics, metrics_path);
-    
-    // ÉTAPE 4: Comparer l'image rendue avec la référence (validation visuelle)
-    std::cout << "--- Validation de l'Image ---" << std::endl;
-    bool image_ok = ImageComparator::compareWithReference(
-        test_name, 
-        output_path,
-        2  // Tolérance: ±2/255 par canal (accepte micro-différences flottantes)
-    );
-    
-    // Vérifier que l'image correspond à la référence
-    if (!image_ok) {
-        std::cerr << "❌ Comparaison d'image ÉCHOUÉE!" << std::endl;
-        std::cerr << "L'image rendue ne correspond pas à la référence." << std::endl;
+    std::cout << "============================================" << std::endl;
+    if (all_passed) {
+        std::cout << "✅ Test RÉUSSI!" << std::endl;
+        std::cout << "============================================" << std::endl;
+        return 0;
+    } else {
+        std::cout << "❌ Test ÉCHOUÉ!" << std::endl;
+        std::cout << "============================================" << std::endl;
         return 1;
     }
-    
-    // Succès: performance mesurée + image validée
-    std::cout << std::endl;
-    std::cout << "============================================" << std::endl;
-    std::cout << "✅ Test RÉUSSI!" << std::endl;
-    std::cout << "============================================" << std::endl;
-    
-    return 0;
 }

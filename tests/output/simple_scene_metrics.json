@@ -1,20 +1,11 @@
 {
   "metrics": {
-<<<<<<< Updated upstream
-    "avg_time_seconds": 0.7621280293333333,
-    "max_time_seconds": 0.763046081,
-    "min_time_seconds": 0.7605254250000001,
-    "samples_per_second": 2720802.7000579787,
+    "avg_time_seconds": 0.19641935800000002,
+    "max_time_seconds": 0.20487069300000002,
+    "min_time_seconds": 0.190172695,
+    "samples_per_second": 10557004.264314923,
     "samples_rendered": 2073600,
-    "std_deviation": 0.001392797879329317
-=======
-    "avg_time_seconds": 0.24951438933333336,
-    "max_time_seconds": 0.254162667,
-    "min_time_seconds": 0.243821417,
-    "samples_per_second": 8310542.752826246,
-    "samples_rendered": 2073600,
-    "std_deviation": 0.005249181183817753
->>>>>>> Stashed changes
+    "std_deviation": 0.007592971768200452
   },
   "passed": true,
   "test_name": "simple_scene"

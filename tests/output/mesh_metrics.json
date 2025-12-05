@@ -1,20 +1,11 @@
 {
   "metrics": {
-<<<<<<< Updated upstream
-    "avg_time_seconds": 20.918883272000002,
-    "max_time_seconds": 20.932307714,
-    "min_time_seconds": 20.90545883,
-    "samples_per_second": 99125.75031075014,
+    "avg_time_seconds": 2.9463386600000003,
+    "max_time_seconds": 3.039935579,
+    "min_time_seconds": 2.852741741,
+    "samples_per_second": 703788.7491182021,
     "samples_rendered": 2073600,
-    "std_deviation": 0.018985027943690735
-=======
-    "avg_time_seconds": 3.9073487865,
-    "max_time_seconds": 3.914794252,
-    "min_time_seconds": 3.899903321,
-    "samples_per_second": 530692.3219049055,
-    "samples_rendered": 2073600,
-    "std_deviation": 0.010529478288281014
->>>>>>> Stashed changes
+    "std_deviation": 0.1323660322461362
   },
   "passed": true,
   "test_name": "mesh"
