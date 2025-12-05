@@ -1,11 +1,11 @@
 {
   "metrics": {
-    "avg_time_seconds": 0.25668097233333337,
-    "max_time_seconds": 0.258995375,
-    "min_time_seconds": 0.25503254200000003,
-    "samples_per_second": 8078510.772147002,
+    "avg_time_seconds": 0.7621280293333333,
+    "max_time_seconds": 0.763046081,
+    "min_time_seconds": 0.7605254250000001,
+    "samples_per_second": 2720802.7000579787,
     "samples_rendered": 2073600,
-    "std_deviation": 0.002063649851124545
+    "std_deviation": 0.001392797879329317
   },
   "passed": true,
   "test_name": "simple_scene"

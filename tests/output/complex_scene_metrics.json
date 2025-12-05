@@ -1,9 +1,9 @@
 {
   "metrics": {
-    "avg_time_seconds": 4.036723418,
-    "max_time_seconds": 4.036723418,
-    "min_time_seconds": 4.036723418,
-    "samples_per_second": 513683.94246524025,
+    "avg_time_seconds": 22.209827452000003,
+    "max_time_seconds": 22.209827452000003,
+    "min_time_seconds": 22.209827452000003,
+    "samples_per_second": 93364.0751816499,
     "samples_rendered": 2073600,
     "std_deviation": 0.0
   },

@@ -6,12 +6,13 @@
 
 int main() {
     std::cout << "============================================" << std::endl;
-    std::cout << "=== Test: Regression Detection          ===" << std::endl;
+    std::cout << "=== Test: Détection de Régression       ===" << std::endl;
     std::cout << "============================================" << std::endl;
     std::cout << std::endl;
     
-    std::cout << "This test demonstrates that the image comparison" << std::endl;
-    std::cout << "system can detect visual regressions." << std::endl;
+    // Objectif: TESTER le système de détection lui-même
+    std::cout << "Ce test démontre que le système de comparaison d'images" << std::endl;
+    std::cout << "peut détecter les régressions visuelles." << std::endl;
     std::cout << std::endl;
     
     // Configuration
@@ -20,8 +21,8 @@ int main() {
     std::string output_modified = "../../tests/output/regression_modified.png";
     std::string test_name = "regression_test";
     
-    // Step 1: Render the scene normally
-    std::cout << "Step 1: Rendering scene normally..." << std::endl;
+    // ÉTAPE 1: Rendre la scène normalement (image de référence)
+    std::cout << "Étape 1: Rendu de la scène normale..." << std::endl;
     auto metrics1 = BenchmarkRunner::runBenchmark(
         test_name + "_normal",
         scene_path,
@@ -30,68 +31,72 @@ int main() {
     );
     
     if (!metrics1.passed) {
-        std::cerr << "❌ Normal rendering FAILED!" << std::endl;
+        std::cerr << "❌ Rendu normal ÉCHOUÉ!" << std::endl;
         return 1;
     }
 
-    std::cout << "✅ Normal rendering completed" << std::endl;
+    std::cout << "✅ Rendu normal terminé" << std::endl;
     std::cout << std::endl;
     
-    // Step 2: Load the normal image and modify it
-    std::cout << "Step 2: Creating modified version..." << std::endl;
-    std::vector<unsigned char> image;
+    // ÉTAPE 2: Charger l'image et la modifier VOLONTAIREMENT
+    std::cout << "Étape 2: Création de la version modifiée..." << std::endl;
+    std::vector<unsigned char> image;  // Tableau de pixels [R,G,B,A,R,G,B,A,...]
     unsigned width, height;
     unsigned error = lodepng::decode(image, width, height, output_normal);
     
     if (error) {
-        std::cerr << "❌ Failed to load normal image: " 
+        std::cerr << "❌ Échec du chargement de l'image normale: " 
                   << lodepng_error_text(error) << std::endl;
         return 1;
     }
     
-    // Intentionally modify the image: darken it by multiplying by 0.7
+    // Modifier INTENTIONNELLEMENT: assombrir de 30% (simulation de bug)
     for (size_t i = 0; i < image.size(); i += 4) {
-        // Modify RGB channels, keep alpha
+        // Modifier RGB (× 0.7), garder Alpha intact
         image[i]     = static_cast<unsigned char>(image[i] * 0.7);     // R
         image[i + 1] = static_cast<unsigned char>(image[i + 1] * 0.7); // G
         image[i + 2] = static_cast<unsigned char>(image[i + 2] * 0.7); // B
+        // image[i + 3] = Alpha non modifié
     }
     
-    // Save the modified image
+    // Sauvegarder l'image modifiée
     error = lodepng::encode(output_modified, image, width, height);
     if (error) {
-        std::cerr << "❌ Failed to save modified image: " 
+        std::cerr << "❌ Échec de la sauvegarde de l'image modifiée: " 
                   << lodepng_error_text(error) << std::endl;
         return 1;
     }
-    std::cout << "✅ Modified version created (darkened by 30%)" << std::endl;
+    std::cout << "✅ Version modifiée créée (assombrie de 30%)" << std::endl;
     std::cout << std::endl;
     
-    // Step 3: Compare the images - they SHOULD be different
-    std::cout << "Step 3: Comparing normal vs modified..." << std::endl;
+    // ÉTAPE 3: Comparer les 2 images (normale vs modifiée)
+    std::cout << "Étape 3: Comparaison normale vs modifiée..." << std::endl;
     bool images_match = ImageComparator::compare(
-        output_normal,
-        output_modified,
-        2  // tolerance
+        output_normal,    // Image normale
+        output_modified,  // Image assombrie de 30%
+        2  // Tolérance ±2/255
     );
     
     std::cout << std::endl;
     
-    // Step 4: Verify that the comparison correctly detected the difference
+    // ÉTAPE 4: Vérifier que le comparateur A DÉTECTÉ la différence
+    // LOGIQUE INVERSÉE: on VEUT que images_match = false!
     if (images_match) {
-        std::cerr << "❌ REGRESSION TEST FAILED!" << std::endl;
-        std::cerr << "The images should be different, but comparison says they match!" << std::endl;
-        std::cerr << "This means the image comparison is not working correctly." << std::endl;
+        // MAUVAIS! Le comparateur n'a PAS détecté la modification
+        std::cerr << "❌ TEST DE RÉGRESSION ÉCHOUÉ!" << std::endl;
+        std::cerr << "Les images devraient être différentes, mais la comparaison dit qu'elles correspondent!" << std::endl;
+        std::cerr << "Cela signifie que la comparaison d'images ne fonctionne pas correctement." << std::endl;
         return 1;
     } else {
-        std::cout << "✅ REGRESSION TEST PASSED!" << std::endl;
-        std::cout << "The comparison correctly detected the difference between images." << std::endl;
-        std::cout << "This proves the system can detect visual regressions." << std::endl;
+        // BON! Le comparateur a détecté la différence → il fonctionne
+        std::cout << "✅ TEST DE RÉGRESSION RÉUSSI!" << std::endl;
+        std::cout << "La comparaison a correctement détecté la différence entre les images." << std::endl;
+        std::cout << "Cela prouve que le système peut détecter les régressions visuelles." << std::endl;
     }
     
     std::cout << std::endl;
     std::cout << "============================================" << std::endl;
-    std::cout << "✅ Regression detection system validated!" << std::endl;
+    std::cout << "✅ Système de détection de régression validé!" << std::endl;
     std::cout << "============================================" << std::endl;
     
     return 0;
