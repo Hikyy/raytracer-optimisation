@@ -10,7 +10,8 @@ Mesh::Mesh() : SceneObject()
 
 Mesh::~Mesh()
 {
-    for (int i = 0; i < triangles.size(); ++i)
+    const int count = triangles.size();
+    for (int i = 0; i < count; ++i)
     {
         delete triangles[i];
     }
@@ -60,7 +61,8 @@ void Mesh::loadFromObj(std::string path)
 
 void Mesh::applyTransform()
 {
-    for (int i = 0; i < triangles.size(); ++i)
+    const int count = triangles.size();
+    for (int i = 0; i < count; ++i)
     {
         triangles[i]->material = this->material;
         triangles[i]->transform = transform;
@@ -72,21 +74,32 @@ void Mesh::calculateBoundingBox()
 {
     if (triangles.empty())
     {
-        // Si pas de triangles, créer une AABB vide
         boundingBox = AABB(Vector3(), Vector3());
         return;
     }
 
-    // Initialiser avec la première bounding box
+    // Calculer les bounding boxes de tous les triangles
+    const int count = triangles.size();
     triangles[0]->calculateBoundingBox();
     boundingBox = triangles[0]->boundingBox;
 
-    // Parcourir les autres triangles et agrandir la boite
-    for (int i = 1; i < triangles.size(); ++i)
+    for (int i = 1; i < count; ++i)
     {
         triangles[i]->calculateBoundingBox();
         boundingBox.subsume(triangles[i]->boundingBox);
     }
+
+#ifdef USE_BSPTREE
+    // Construire le BSP Tree pour les triangles du mesh
+    // Convertir les triangles en SceneObject* pour le BSP Tree
+    std::vector<SceneObject*> triangleObjects;
+    triangleObjects.reserve(count);
+    for (int i = 0; i < count; ++i)
+    {
+        triangleObjects.push_back(triangles[i]);
+    }
+    triangleBSP.build(triangleObjects, 15, 4);  // Plus de profondeur pour les triangles
+#endif
 }
 
 bool Mesh::intersects(Ray &r, Intersection &intersection, CullingType culling)
@@ -101,22 +114,31 @@ bool Mesh::intersects(Ray &r, Intersection &intersection, CullingType culling)
 #endif
 
     Intersection tInter;
-
-    // OPTIMISÉ : Utiliser lengthSquared() pour éviter sqrt() à chaque triangle
     double closestDistanceSquared = -1;
     Intersection closestInter;
-    for (int i = 0; i < triangles.size(); ++i)
+
+#ifdef USE_BSPTREE
+    // OPTIMISATION: Vecteur statique pour éviter réallocations (hot path!)
+    static thread_local std::vector<SceneObject*> candidates;
+    candidates.clear();
+    
+    if (!triangleBSP.intersects(r, candidates))
+    {
+        return false;
+    }
+
+    const int candidateCount = candidates.size();
+    for (int i = 0; i < candidateCount; ++i)
     {
 #ifdef USE_AABB
-        // OPTIMISATION : Vérifier la bounding box de chaque triangle avant le calcul précis
-        if (!triangles[i]->boundingBox.intersects(r))
+        // Vérifier l'AABB du triangle d'abord
+        if (!candidates[i]->boundingBox.intersects(r))
         {
             continue;
         }
 #endif
-        if (triangles[i]->intersects(r, tInter, culling))
+        if (candidates[i]->intersects(r, tInter, culling))
         {
-            // OPTIMISÉ : lengthSquared() au lieu de length() - pas de sqrt !
             tInter.Distance = (tInter.Position - r.GetPosition()).lengthSquared();
             if (closestDistanceSquared < 0 || tInter.Distance < closestDistanceSquared)
             {
@@ -125,6 +147,30 @@ bool Mesh::intersects(Ray &r, Intersection &intersection, CullingType culling)
             }
         }
     }
+#else
+    // Version sans BSP Tree: tester tous les triangles
+    const int count = triangles.size();
+    for (int i = 0; i < count; ++i)
+    {
+#ifdef USE_AABB
+        // Optimisation AABB: vérifier la bounding box du triangle
+        if (!triangles[i]->boundingBox.intersects(r))
+        {
+            continue;
+        }
+#endif
+        if (triangles[i]->intersects(r, tInter, culling))
+        {
+            tInter.Distance = (tInter.Position - r.GetPosition()).lengthSquared();
+            if (closestDistanceSquared < 0 || tInter.Distance < closestDistanceSquared)
+            {
+                closestDistanceSquared = tInter.Distance;
+                closestDistanceSquared = tInter.Distance;
+                closestInter = tInter;
+            }
+        }
+    }
+#endif
 
     if (closestDistanceSquared < 0)
     {

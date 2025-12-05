@@ -6,11 +6,17 @@
 #include "../raymath/Color.hpp"
 #include "../raymath/Ray.hpp"
 #include "./Triangle.hpp"
+#ifdef USE_BSPTREE
+#include "BSPTree.hpp"
+#endif
 
 class Mesh : public SceneObject
 {
 private:
   std::vector<Triangle *> triangles;
+#ifdef USE_BSPTREE
+  BSPTree triangleBSP;  // BSP Tree pour les triangles du mesh
+#endif
 
 public:
   Mesh();

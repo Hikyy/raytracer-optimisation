@@ -18,6 +18,7 @@ public:
 
   void setPosition(Vector3 const &pos);
   void setRotation(Vector3 const &rot);
+  Vector3 getPosition() const { return position; }  // Pour BSP Tree
 
   Vector3 apply(Vector3 const &pos);
 };
