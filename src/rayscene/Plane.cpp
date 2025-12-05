@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <limits>
 #include "Plane.hpp"
 #include "../raymath/Vector3.hpp"
 
@@ -9,6 +10,15 @@ Plane::Plane(Vector3 p, Vector3 n) : point(p), normal(n)
 
 Plane::~Plane()
 {
+}
+
+void Plane::calculateBoundingBox()
+{
+  // Un plan est infini, donc on crée une AABB très grande
+  double inf = std::numeric_limits<double>::infinity();
+  Vector3 min(-inf, -inf, -inf);
+  Vector3 max(inf, inf, inf);
+  boundingBox = AABB(min, max);
 }
 
 bool Plane::intersects(Ray &r, Intersection &intersection, CullingType culling)

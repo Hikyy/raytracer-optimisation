@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "Mesh.hpp"
 #include "../raymath/Vector3.hpp"
 #include "../objloader/OBJ_Loader.h"
@@ -64,6 +65,27 @@ void Mesh::applyTransform()
         triangles[i]->material = this->material;
         triangles[i]->transform = transform;
         triangles[i]->applyTransform();
+    }
+}
+
+void Mesh::calculateBoundingBox()
+{
+    if (triangles.empty())
+    {
+        // Si pas de triangles, créer une AABB vide
+        boundingBox = AABB(Vector3(), Vector3());
+        return;
+    }
+
+    // Initialiser avec la première bounding box
+    triangles[0]->calculateBoundingBox();
+    boundingBox = triangles[0]->boundingBox;
+
+    // Parcourir les autres triangles et agrandir la boite
+    for (int i = 1; i < triangles.size(); ++i)
+    {
+        triangles[i]->calculateBoundingBox();
+        boundingBox.subsume(triangles[i]->boundingBox);
     }
 }
 

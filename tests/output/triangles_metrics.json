@@ -1,11 +1,20 @@
 {
   "metrics": {
+<<<<<<< Updated upstream
     "avg_time_seconds": 1.1144504830000002,
     "max_time_seconds": 1.11742422,
     "min_time_seconds": 1.1114767460000001,
     "samples_per_second": 1860647.944104305,
     "samples_rendered": 2073600,
     "std_deviation": 0.004205499196330569
+=======
+    "avg_time_seconds": 0.2257499375,
+    "max_time_seconds": 0.233166375,
+    "min_time_seconds": 0.2183335,
+    "samples_per_second": 9185384.602819657,
+    "samples_rendered": 2073600,
+    "std_deviation": 0.010488426496992408
+>>>>>>> Stashed changes
   },
   "passed": true,
   "test_name": "triangles"
