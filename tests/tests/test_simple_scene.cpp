@@ -60,33 +60,21 @@ int main(int argc, char** argv) {
         if (scene.has_reference) {
             std::cout << "--- Validation de l'Image ---" << std::endl;
             
-            std::string ref_path = SceneRegistry::getReferencePathForMode(
-                scene.reference_name,
-                use_multithread
-            );
+            // Calculer le hash de l'image générée
+            std::string generated_hash = ImageHasher::computeImageHash(output_path);
+            std::cout << "Hash généré: " << generated_hash << std::endl;
+            std::cout << "Hash référence: " << scene.reference_hash << std::endl;
             
-            std::cout << "Référence: " << ref_path << std::endl;
+            // Comparer avec le hash de référence stocké dans SceneConfig
+            bool hash_ok = (generated_hash == scene.reference_hash);
             
-            // MÉTHODE 1: Comparaison pixel-par-pixel avec tolérance
-            std::cout << "1. Comparaison pixel-par-pixel (tolérance ±2)..." << std::endl;
-            bool pixel_ok = ImageComparator::compare(
-                ref_path,
-                output_path,
-                2  // Tolérance
-            );
-            
-            // MÉTHODE 2: Comparaison par hash (exactitude absolue)
-            std::cout << "2. Comparaison par hash (exactitude)..." << std::endl;
-            bool hash_ok = ImageHasher::compareByHash(ref_path, output_path);
-            
-            if (!pixel_ok) {
-                std::cerr << "❌ Comparaison pixel ÉCHOUÉE pour " << scene.name << std::endl;
-                all_passed = false;
-            } else if (!hash_ok) {
-                std::cout << "⚠️  Hash différent (normal en multi-thread)" << std::endl;
-                std::cout << "✅ Mais pixels OK (différences < tolérance)" << std::endl;
+            if (hash_ok) {
+                std::cout << "✅ Hash correspondent: " << generated_hash << std::endl;
             } else {
-                std::cout << "✅ Image PARFAITEMENT identique (hash + pixels)" << std::endl;
+                std::cerr << "❌ Hash différents:" << std::endl;
+                std::cerr << "   Généré:    " << generated_hash << std::endl;
+                std::cerr << "   Référence: " << scene.reference_hash << std::endl;
+                all_passed = false;
             }
         }
         

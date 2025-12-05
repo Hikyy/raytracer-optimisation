@@ -4,13 +4,14 @@
 
 /**
  * Configuration des scènes pour les tests
- * Définit toutes les scènes disponibles et leurs références
+ * Définit toutes les scènes disponibles et leurs hash de référence
  */
 
 struct SceneConfig {
     std::string name;              // Nom du test (ex: "two_spheres")
     std::string scene_path;        // Chemin vers le fichier JSON
     std::string reference_name;    // Nom de la référence (ex: "two-spheres-on-plane")
+    std::string reference_hash;    // Hash de référence attendu (hex 16 chars)
     int iterations;                // Nombre d'itérations pour benchmark
     bool has_reference;            // Si false, pas de comparaison d'image
 };

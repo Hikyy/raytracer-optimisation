@@ -6,13 +6,15 @@ std::vector<SceneConfig> SceneRegistry::getAllScenes() {
             "two_spheres",
             "scenes/two-spheres-on-plane.json",
             "two-spheres-on-plane",
-            3,    // 3 itérations
-            true  // A une référence
+            "a723b69988e188cb",
+            3,
+            true
         },
         {
             "triangles",
             "scenes/two-triangles-on-plane.json",
             "two-triangles-on-plane",
+            "e0a6093d536fe95e",
             2,
             true
         },
@@ -20,6 +22,7 @@ std::vector<SceneConfig> SceneRegistry::getAllScenes() {
             "iso_sphere_mesh",
             "scenes/iso-sphere-on-plane.json",
             "iso-sphere-on-plane",
+            "d09456ec4ab23590",
             2,
             true
         },
@@ -27,6 +30,7 @@ std::vector<SceneConfig> SceneRegistry::getAllScenes() {
             "monkey_mesh",
             "scenes/monkey-on-plane.json",
             "monkey-on-plane",
+            "f7e81c2bb603eec5",
             2,
             true
         },
@@ -34,8 +38,9 @@ std::vector<SceneConfig> SceneRegistry::getAllScenes() {
             "galaxy",
             "scenes/sphere-galaxy-on-plane.json",
             "sphere-galaxy-on-plane",
-            1,     // 1 itération (scène lente)
-            true   // A maintenant une référence!
+            "6039265cf80af70a",
+            1,
+            true
         }
     };
 }
