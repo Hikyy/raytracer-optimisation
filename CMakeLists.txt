@@ -23,6 +23,14 @@ else()
     message(STATUS "AABB Optimization: DISABLED")
 endif()
 
+option(USE_BSPTREE "Enable BSP Tree optimization" ON)
+if(USE_BSPTREE)
+    add_compile_definitions(USE_BSPTREE)
+    message(STATUS "BSP Tree: ENABLED")
+else()
+    message(STATUS "BSP Tree: DISABLED")
+endif()
+
 add_executable(raytracer main.cpp)
 
 target_include_directories(raytracer PUBLIC
