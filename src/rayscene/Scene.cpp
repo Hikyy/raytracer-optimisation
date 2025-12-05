@@ -34,6 +34,9 @@ void Scene::prepare()
   for (int i = 0; i < objects.size(); ++i)
   {
     objects[i]->applyTransform();
+#ifdef USE_AABB
+    objects[i]->calculateBoundingBox();
+#endif
   }
 }
 
@@ -75,6 +78,17 @@ bool Scene::closestIntersection(Ray &r, Intersection &closest, CullingType culli
   Intersection closestInter;
   for (int i = 0; i < objects.size(); ++i)
   {
+#ifdef USE_AABB
+    // OPTIMISATION AABB : Vérifier d'abord si le rayon intersecte la bounding box
+    // Si le rayon ne touche pas la bounding box, ignorer compl\u00e8tement l'objet
+    if (!objects[i]->boundingBox.intersects(r))
+    {
+      continue;
+    }
+
+    // Si on arrive ici, la bounding box a \u00e9t\u00e9 touch\u00e9e
+    // On doit faire un calcul d'intersection pr\u00e9cis
+#endif
     if (objects[i]->intersects(r, intersection, culling))
     {
       // OPTIMISÉ : Utiliser lengthSquared() au lieu de length() - pas besoin de sqrt !

@@ -35,6 +35,12 @@ int main(int argc, char *argv[])
   std::cout << "Mode: Single-threaded" << std::endl;
 #endif
 
+#ifdef USE_AABB
+  std::cout << "AABB Optimization: ON" << std::endl;
+#else
+  std::cout << "AABB Optimization: OFF" << std::endl;
+#endif
+
   std::cout << "Rendering " << image->width << "x" << image->height << " pixels..." << std::endl;
 
   auto begin = std::chrono::high_resolution_clock::now();

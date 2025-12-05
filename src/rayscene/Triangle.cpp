@@ -19,6 +19,24 @@ void Triangle::applyTransform()
   tC = this->transform.apply(C);
 }
 
+void Triangle::calculateBoundingBox()
+{
+  // Calculer les min et max pour chaque axe parmi les 3 points transform\u00e9s
+  Vector3 min(
+    std::min({tA.x, tB.x, tC.x}),
+    std::min({tA.y, tB.y, tC.y}),
+    std::min({tA.z, tB.z, tC.z})
+  );
+
+  Vector3 max(
+    std::max({tA.x, tB.x, tC.x}),
+    std::max({tA.y, tB.y, tC.y}),
+    std::max({tA.z, tB.z, tC.z})
+  );
+
+  boundingBox = AABB(min, max);
+}
+
 bool Triangle::intersects(Ray &r, Intersection &intersection, CullingType culling)
 {
   Vector3 BA = tB - tA;
